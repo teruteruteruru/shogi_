@@ -1,0 +1,54 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 2
+  tags:
+  - select
+  - koma
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - koma
+  - Water
+  - UI
+  - select
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: Default
+    uniqueID: 0
+    locked: 0
+  - name: ban
+    uniqueID: 2284633083
+    locked: 0
+  - name: koma
+    uniqueID: 3270257715
+    locked: 0
+  - name: select
+    uniqueID: 2614353721
+    locked: 0

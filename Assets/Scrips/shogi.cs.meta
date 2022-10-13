@@ -1,0 +1,21 @@
+fileFormatVersion: 2
+guid: fdc9f3a9422739e4490f3407ba850eb2
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - fu: {fileID: 3045039624048667170, guid: b6bbe7c0f489bc7418f652d95be330b9, type: 3}
+  - gyoku: {fileID: 8016944336224682413, guid: c557e8b481f54a84797ba310488eff1b, type: 3}
+  - kin: {fileID: 3667935469132020716, guid: 873d4099bf6105f4b8865572712e44bf, type: 3}
+  - gin: {fileID: 5463270688747939051, guid: a3c82a063d36d124f9231043f527d602, type: 3}
+  - kei: {fileID: 8144159604994796365, guid: 992f5c037ad5762418c0340d4ef5032d, type: 3}
+  - kyou: {fileID: 3972453586737110529, guid: b00d950e11503594ab7a2210825d2a63, type: 3}
+  - kaku: {fileID: 8062007071252432862, guid: 4ca7976fbab124b41a44ead0cedfec0f, type: 3}
+  - hisha: {fileID: 864378922882529986, guid: e076a5db01df8754bbdb9de1e73bf30a, type: 3}
+  - uma: {instanceID: 0}
+  - ryuu: {instanceID: 0}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
