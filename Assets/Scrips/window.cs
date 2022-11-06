@@ -56,21 +56,26 @@ public class window : MonoBehaviour
     IEnumerator wait(int a) 
     {
         int num;
+        
         yield return new WaitForSeconds(0.1f);
         Debug.Log("isClicked:" + isClicked);
         Debug.Log(buttom); 
         windowtext = GameObject.Find("windowtext");
-        var Ran_Obj = GameObject.Find("Random_num");
+        var Roll_Obj = GameObject.Find("Random_num");
+        var Game_Obj = GameObject.Find("game");
+        windowtext = GameObject.Find("windowtext");
         string[] nari_text_random = new string[3];
         nari_text_random[0] = "‹à‚É‚È‚è‚Ü‚·";
         nari_text_random[1] = "<color=#8b0000>—´‰¤</color>‚É‚È‚è‚Ü‚·";
         nari_text_random[2] = "<color=#00008b>—´”n</color>‚É‚È‚è‚Ü‚·";
+       
         while (!isClicked)
         {
             if (a == 0)
             {
-                num = Ran_Obj.GetComponent<Random_num>().num;
-            }else
+                num = Roll_Obj.GetComponent<Random_num>().num;
+            }
+            else
             {
                 num = a;
             }
@@ -104,7 +109,7 @@ public class window : MonoBehaviour
             {
                 Debug.Log(buttom);
                 isClicked = true;
-                windowtext = GameObject.Find("windowtext");
+                
                 Debug.Log(windowtext);
                 yes_no = true;
                 Destroy(obj1);
@@ -112,6 +117,16 @@ public class window : MonoBehaviour
                 Debug.Log(windowtext);
                 window_image = GameObject.Find("window_image");
                 Debug.Log(window_image.GetComponent<Image>());
+                if (a == 0)
+                {
+                    num = Game_Obj.GetComponent<shogi>().random_koma_pub;
+                }
+                else
+                {
+                    num = a;
+                }
+                windowtext.GetComponent<Text>().text = nari_text_random[num];
+                yield return new WaitForSeconds(1f);
                 window_image.GetComponent<Image>().enabled = false;
                 windowtext.GetComponent<Text>().text = "";
             }
@@ -119,7 +134,7 @@ public class window : MonoBehaviour
             {
                 Debug.Log(buttom);
                 isClicked = true;
-                windowtext = GameObject.Find("windowtext");
+                
                 Debug.Log(windowtext);
                 yes_no = false;
                 Destroy(obj1);
@@ -127,6 +142,16 @@ public class window : MonoBehaviour
                 Debug.Log(windowtext);
                 window_image = GameObject.Find("window_image");
                 Debug.Log(window_image.GetComponent<Image>());
+                if (a == 0)
+                {
+                    num = Game_Obj.GetComponent<shogi>().random_koma_pub;
+                }
+                else
+                {
+                    num = a;
+                }
+                windowtext.GetComponent<Text>().text = nari_text_random[num];
+                yield return new WaitForSeconds(1f);
                 window_image.GetComponent<Image>().enabled = false;
                 windowtext.GetComponent<Text>().text = "";
             }

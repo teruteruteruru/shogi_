@@ -31,6 +31,7 @@ public class shogi : MonoBehaviour
     public Text winner;
     public AudioClip sound1;
     public AudioClip sound2;
+    
 
 
     private AudioSource audioSource;
@@ -47,6 +48,7 @@ public class shogi : MonoBehaviour
 
     private int[] selectkoma = new int[2];
     private int[] random_koma = new int[100];
+    public int random_koma_pub;
 
 
     //駒の配置
@@ -407,7 +409,7 @@ public class shogi : MonoBehaviour
             }
             if(i>=31)
             {
-                random_koma[i] = 3; //kin
+                random_koma[i] = 0; //kin
             }
         }
         //初手プレイヤーの決定
@@ -1990,7 +1992,7 @@ public class shogi : MonoBehaviour
             if (koma[k, l] == name_koma.gin || koma[k, l] == name_koma.kei || koma[k, l] == name_koma.kyou || koma[k, l] == name_koma.fu)
             {
                 int ran = Random.Range(0, 100);
-                
+                random_koma_pub = random_koma[ran];
                 Debug.Log(random_koma[ran]);
                 if (random_koma[ran] == 1)
                 {
@@ -2000,7 +2002,7 @@ public class shogi : MonoBehaviour
                 {
                     yield return StartCoroutine(nariuma_ran(a, b, k, l));
                 }
-                else if (random_koma[ran] == 3)
+                else if (random_koma[ran] == 0)
                 {
                     yield return StartCoroutine(narikin(a, b, k, l));
                 }
