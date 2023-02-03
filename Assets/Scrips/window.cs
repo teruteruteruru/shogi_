@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 
 
-public class window : MonoBehaviour
+public class Window : MonoBehaviour
 {
     public bool yes_no;
     public bool isClicked;
@@ -119,7 +119,7 @@ public class window : MonoBehaviour
                 Debug.Log(window_image.GetComponent<Image>());
                 if (a == 0)
                 {
-                    num = Game_Obj.GetComponent<shogi>().random_koma_pub;
+                    num = Game_Obj.GetComponent<Shogi>().random_koma_pub;
                 }
                 else
                 {
@@ -144,7 +144,7 @@ public class window : MonoBehaviour
                 Debug.Log(window_image.GetComponent<Image>());
                 if (a == 0)
                 {
-                    num = Game_Obj.GetComponent<shogi>().random_koma_pub;
+                    num = Game_Obj.GetComponent<Shogi>().random_koma_pub;
                 }
                 else
                 {

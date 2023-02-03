@@ -4,6 +4,7 @@ using UnityEngine;
 
 using UnityEngine.UI;
 
+//どっちのプレイヤーのターンか表示してるクラス
 public class Player : MonoBehaviour
 {
     public player play_now;
@@ -19,7 +20,7 @@ public class Player : MonoBehaviour
     {
         
         GameObject main_game = GameObject.Find("game");
-        play_now = main_game.GetComponent<shogi>().turn;
+        play_now = main_game.GetComponent<Shogi>().turn;
         if(play_now == player.player1)
         {
             player_name.text = "Player:Player1";

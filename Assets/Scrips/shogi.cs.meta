@@ -14,7 +14,7 @@ MonoImporter:
   - hisha: {fileID: 864378922882529986, guid: e076a5db01df8754bbdb9de1e73bf30a, type: 3}
   - uma: {instanceID: 0}
   - ryuu: {instanceID: 0}
-  executionOrder: 0
+  executionOrder: 300
   icon: {instanceID: 0}
   userData: 
   assetBundleName: 
