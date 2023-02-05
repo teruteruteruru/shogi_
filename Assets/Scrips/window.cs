@@ -15,6 +15,7 @@ public class Window : MonoBehaviour
    
     private GameObject window_image;
     private GameObject windowtext;
+    
     private string buttom = "aaa";
     private GameObject obj1;
     private GameObject obj2;
@@ -24,21 +25,22 @@ public class Window : MonoBehaviour
         window_image = GameObject.Find("window_image");
         Debug.Log(window_image);
         window_image.GetComponent<Image>().enabled = false;
+        
     }
-
+    //選択肢ウィンドウを表示している
     public void nari(int a)
     {
         yes = (GameObject)Resources.Load("yes");
         obj1 = Instantiate(yes, new Vector3(-1.0f, -1.0f, -5.0f), Quaternion.identity) as GameObject;
         obj1.name = "yes";
 
-
+        
         no = (GameObject)Resources.Load("no");
         obj2 = Instantiate(no, new Vector3(3.0f, -1.0f, -5.0f), Quaternion.identity) as GameObject;
         obj2.name = "no";
 
 
-       
+        
         window_image = GameObject.Find("window_image");
         window_image.GetComponent<Image>().enabled = true;
        
@@ -53,6 +55,7 @@ public class Window : MonoBehaviour
         
         
     }
+
     IEnumerator wait(int a) 
     {
         int num;

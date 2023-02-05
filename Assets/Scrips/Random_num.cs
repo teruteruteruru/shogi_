@@ -27,6 +27,8 @@ public class Random_num : MonoBehaviour
 
         }
     }
+
+    
     void Update()
     {
         

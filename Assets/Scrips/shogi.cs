@@ -5,6 +5,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEditor;
 
+
 public enum name_koma
 {
     nashi = 0, gyoku = 1, hisha = 2, kaku = 3, kin = 4, gin = 5, kei = 6, kyou = 7, fu = 8, uma = 9, ryuu = 10, nari_gin = 11, nari_kei = 12, nari_kyou = 13, nari_fu = 14
@@ -29,7 +30,6 @@ public class Shogi : MonoBehaviour
     
     public AudioClip sound1;
     public AudioClip sound2;
-
     
 
 
@@ -37,8 +37,10 @@ public class Shogi : MonoBehaviour
 
 
 
+
     [SerializeField] int probability_ryuu = 0;
     [SerializeField] int probability_uma = 0;
+    
 
 
     private GameObject Winner;
@@ -143,11 +145,11 @@ public class Shogi : MonoBehaviour
 
     IEnumerator narikin(int a, int b, int k, int l)
     {
-        UnityEngine.Debug.Log(a);
-        UnityEngine.Debug.Log(turn);
+        
+        
         if (a > 5 && turn == player.player1)
         {
-            UnityEngine.Debug.Log("narikin");
+            
             GameObject _window = GameObject.Find("Window");
             _window.GetComponent<Window>().nari(0);
             bool isOK = _window.GetComponent<Window>().yes_no;
@@ -156,8 +158,7 @@ public class Shogi : MonoBehaviour
             {
                 isClicked = _window.GetComponent<Window>().isClicked;
                 isOK = _window.GetComponent<Window>().yes_no;
-                Debug.Log(isClicked);
-                UnityEngine.Debug.Log("isClicked:false");
+               
                 yield return null;
             }
 
@@ -185,7 +186,6 @@ public class Shogi : MonoBehaviour
         }
         else if (a < 3 && turn == player.player2)
         {
-            UnityEngine.Debug.Log("narikin");
             GameObject _window = GameObject.Find("Window");
             _window.GetComponent<Window>().nari(0);
             bool isOK = _window.GetComponent<Window>().yes_no;
@@ -194,8 +194,7 @@ public class Shogi : MonoBehaviour
             {
                 isClicked = _window.GetComponent<Window>().isClicked;
                 isOK = _window.GetComponent<Window>().yes_no;
-                Debug.Log(isClicked);
-                UnityEngine.Debug.Log("isClicked:false");
+              
                 yield return null;
             }
             if (isOK)
@@ -228,11 +227,10 @@ public class Shogi : MonoBehaviour
 
     IEnumerator nariryuu(int a, int b, int k, int l)
     {
-        UnityEngine.Debug.Log(a);
-        UnityEngine.Debug.Log(turn);
+        
         if (a > 5 && turn == player.player1)
         {
-            UnityEngine.Debug.Log("narikin");
+            
             GameObject _window = GameObject.Find("Window");
             _window.GetComponent<Window>().nari(0);
             bool isOK = _window.GetComponent<Window>().yes_no;
@@ -241,8 +239,8 @@ public class Shogi : MonoBehaviour
             {
                 isClicked = _window.GetComponent<Window>().isClicked;
                 isOK = _window.GetComponent<Window>().yes_no;
-                Debug.Log(isClicked);
-                UnityEngine.Debug.Log("isClicked:false");
+                
+                
                 yield return null;
             }
 
@@ -256,7 +254,6 @@ public class Shogi : MonoBehaviour
         }
         else if (a < 3 && turn == player.player2)
         {
-            UnityEngine.Debug.Log("narikin");
             GameObject _window = GameObject.Find("Window");
             _window.GetComponent<Window>().nari(0);
             bool isOK = _window.GetComponent<Window>().yes_no;
@@ -265,8 +262,9 @@ public class Shogi : MonoBehaviour
             {
                 isClicked = _window.GetComponent<Window>().isClicked;
                 isOK = _window.GetComponent<Window>().yes_no;
-                Debug.Log(isClicked);
-                UnityEngine.Debug.Log("isClicked:false");
+                
+                
+               
                 yield return null;
             }
             if (isOK)
@@ -284,11 +282,14 @@ public class Shogi : MonoBehaviour
     
     IEnumerator nariryuu_ran(int a, int b, int k, int l)
     {
-        UnityEngine.Debug.Log(a);
-        UnityEngine.Debug.Log(turn);
+       
+
+
+        
+
         if (a > 5 && turn == player.player1)
         {
-            UnityEngine.Debug.Log("narikin");
+            
             GameObject _window = GameObject.Find("Window");
             _window.GetComponent<Window>().nari(0);
             bool isOK = _window.GetComponent<Window>().yes_no;
@@ -297,8 +298,9 @@ public class Shogi : MonoBehaviour
             {
                 isClicked = _window.GetComponent<Window>().isClicked;
                 isOK = _window.GetComponent<Window>().yes_no;
-                Debug.Log(isClicked);
-                UnityEngine.Debug.Log("isClicked:false");
+                
+                
+
                 yield return null;
             }
 
@@ -312,7 +314,7 @@ public class Shogi : MonoBehaviour
         }
         else if (a < 3 && turn == player.player2)
         {
-            UnityEngine.Debug.Log("narikin");
+            
             GameObject _window = GameObject.Find("Window");
             _window.GetComponent<Window>().nari(0);
             bool isOK = _window.GetComponent<Window>().yes_no;
@@ -321,8 +323,8 @@ public class Shogi : MonoBehaviour
             {
                 isClicked = _window.GetComponent<Window>().isClicked;
                 isOK = _window.GetComponent<Window>().yes_no;
-                Debug.Log(isClicked);
-                UnityEngine.Debug.Log("isClicked:false");
+                
+               
                 yield return null;
             }
             if (isOK)
@@ -340,12 +342,12 @@ public class Shogi : MonoBehaviour
 
     IEnumerator nariuma(int a, int b, int k, int l)
     {
-        UnityEngine.Debug.Log(a);
-        UnityEngine.Debug.Log(turn);
+        
+        
 
         if (a > 5 && turn == player.player1)
         {
-            UnityEngine.Debug.Log("narikin");
+            Play_sound.instance.Random_sound();
             GameObject _window = GameObject.Find("Window");
             _window.GetComponent<Window>().nari(0);
             bool isOK = _window.GetComponent<Window>().yes_no;
@@ -354,8 +356,8 @@ public class Shogi : MonoBehaviour
             {
                 isClicked = _window.GetComponent<Window>().isClicked;
                 isOK = _window.GetComponent<Window>().yes_no;
-                Debug.Log(isClicked);
-                UnityEngine.Debug.Log("isClicked:false");
+                
+                
                 yield return null;
             }
 
@@ -370,7 +372,7 @@ public class Shogi : MonoBehaviour
         }
         else if (a < 3 && turn == player.player2)
         {
-            UnityEngine.Debug.Log("narikin");
+            Play_sound.instance.Random_sound();
             GameObject _window = GameObject.Find("Window");
             _window.GetComponent<Window>().nari(0);
             bool isOK = _window.GetComponent<Window>().yes_no;
@@ -379,8 +381,8 @@ public class Shogi : MonoBehaviour
             {
                 isClicked = _window.GetComponent<Window>().isClicked;
                 isOK = _window.GetComponent<Window>().yes_no;
-                Debug.Log(isClicked);
-                UnityEngine.Debug.Log("isClicked:false");
+                
+                
                 yield return null;
             }
             if (isOK)
@@ -398,12 +400,14 @@ public class Shogi : MonoBehaviour
     
     IEnumerator nariuma_ran(int a, int b, int k, int l)
     {
-        UnityEngine.Debug.Log(a);
-        UnityEngine.Debug.Log(turn);
+        
+        
+
+        
 
         if (a > 5 && turn == player.player1)
         {
-            UnityEngine.Debug.Log("narikin");
+            Play_sound.instance.Random_sound();
             GameObject _window = GameObject.Find("Window");
             _window.GetComponent<Window>().nari(0);
             bool isOK = _window.GetComponent<Window>().yes_no;
@@ -412,8 +416,8 @@ public class Shogi : MonoBehaviour
             {
                 isClicked = _window.GetComponent<Window>().isClicked;
                 isOK = _window.GetComponent<Window>().yes_no;
-                Debug.Log(isClicked);
-                UnityEngine.Debug.Log("isClicked:false");
+                
+                
                 yield return null;
             }
 
@@ -428,7 +432,7 @@ public class Shogi : MonoBehaviour
         }
         else if (a < 3 && turn == player.player2)
         {
-            UnityEngine.Debug.Log("narikin");
+            Play_sound.instance.Random_sound();
             GameObject _window = GameObject.Find("Window");
             _window.GetComponent<Window>().nari(0);
             bool isOK = _window.GetComponent<Window>().yes_no;
@@ -437,8 +441,8 @@ public class Shogi : MonoBehaviour
             {
                 isClicked = _window.GetComponent<Window>().isClicked;
                 isOK = _window.GetComponent<Window>().yes_no;
-                Debug.Log(isClicked);
-                UnityEngine.Debug.Log("isClicked:false");
+                
+                
                 yield return null;
             }
             if (isOK)
@@ -489,17 +493,21 @@ public class Shogi : MonoBehaviour
             {
                 int ran = Random.Range(0, 100);
                 random_koma_pub = random_koma[ran];
-                Debug.Log(random_koma[ran]);
+                Debug.Log("random"+random_koma[ran]);
                 if (random_koma[ran] == 1)
                 {
+                    
+                    Window_color_Random.instance.Color_Randomizer();
                     yield return StartCoroutine(nariryuu_ran(a, b, k, l));
                 }
                 else if(random_koma[ran] == 2)
                 {
+                    Window_color_Random.instance.Color_Randomizer();
                     yield return StartCoroutine(nariuma_ran(a, b, k, l));
                 }
                 else if (random_koma[ran] == 0)
                 {
+                    Window_color.instance.Window_coler_Blue();
                     yield return StartCoroutine(narikin(a, b, k, l));
                 }
 
