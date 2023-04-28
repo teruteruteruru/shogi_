@@ -232,7 +232,7 @@ public class Shogi : MonoBehaviour
         {
             
             GameObject _window = GameObject.Find("Window");
-            _window.GetComponent<Window>().nari(0);
+            _window.GetComponent<Window>().nari(1);
             bool isOK = _window.GetComponent<Window>().yes_no;
             bool isClicked = _window.GetComponent<Window>().isClicked;
             while (!isClicked)
@@ -255,7 +255,7 @@ public class Shogi : MonoBehaviour
         else if (a < 3 && turn == player.player2)
         {
             GameObject _window = GameObject.Find("Window");
-            _window.GetComponent<Window>().nari(0);
+            _window.GetComponent<Window>().nari(1);
             bool isOK = _window.GetComponent<Window>().yes_no;
             bool isClicked = _window.GetComponent<Window>().isClicked;
             while (!isClicked)
@@ -289,7 +289,7 @@ public class Shogi : MonoBehaviour
 
         if (a > 5 && turn == player.player1)
         {
-            
+            Play_sound.instance.Random_sound();
             GameObject _window = GameObject.Find("Window");
             _window.GetComponent<Window>().nari(0);
             bool isOK = _window.GetComponent<Window>().yes_no;
@@ -314,7 +314,7 @@ public class Shogi : MonoBehaviour
         }
         else if (a < 3 && turn == player.player2)
         {
-            
+            Play_sound.instance.Random_sound();
             GameObject _window = GameObject.Find("Window");
             _window.GetComponent<Window>().nari(0);
             bool isOK = _window.GetComponent<Window>().yes_no;
@@ -347,9 +347,9 @@ public class Shogi : MonoBehaviour
 
         if (a > 5 && turn == player.player1)
         {
-            Play_sound.instance.Random_sound();
+            
             GameObject _window = GameObject.Find("Window");
-            _window.GetComponent<Window>().nari(0);
+            _window.GetComponent<Window>().nari(2);
             bool isOK = _window.GetComponent<Window>().yes_no;
             bool isClicked = _window.GetComponent<Window>().isClicked;
             while (!isClicked)
@@ -372,9 +372,9 @@ public class Shogi : MonoBehaviour
         }
         else if (a < 3 && turn == player.player2)
         {
-            Play_sound.instance.Random_sound();
+            
             GameObject _window = GameObject.Find("Window");
-            _window.GetComponent<Window>().nari(0);
+            _window.GetComponent<Window>().nari(2);
             bool isOK = _window.GetComponent<Window>().yes_no;
             bool isClicked = _window.GetComponent<Window>().isClicked;
             while (!isClicked)
@@ -467,7 +467,7 @@ public class Shogi : MonoBehaviour
         _audioSource.PlayOneShot(sound2);
         if (banmen[a, b] != turn)
         {
-            Getkoma.Get_koma(winner_text, turn, koma, player1_motigoma, player2_motigoma, a, b);
+            Getkoma.Get_koma(ref winner_text, turn, koma, player1_motigoma, player2_motigoma, a, b);
             Winner.GetComponent<Text>().text = winner_text;
         }
 

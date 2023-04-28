@@ -408,7 +408,7 @@ public class Koma_move : Instantiation
                     {
                         if (banmen[a + i, b + j] != player.player1)
                         {
-                            Instantiate_koma(select, a + i, b + i, direction_player1);
+                            Instantiate_koma(select, a + i, b + j, direction_player1);
                         }
                     }
                 }
@@ -432,7 +432,7 @@ public class Koma_move : Instantiation
                     {
                         if (banmen[a + i, b + j] != player.player2)
                         {
-                            Instantiate_koma(select, a + i, b + i, direction_player1);
+                            Instantiate_koma(select, a + i, b + j, direction_player1);
                         }
                     }
                 }
@@ -465,7 +465,7 @@ public class Koma_move : Instantiation
                 {
                     if (banmen[a + i, b + j] != player.player1)
                     {
-                        Instantiate_koma(select, a + i, b + i, direction_player1);
+                        Instantiate_koma(select, a + i, b + j, direction_player1);
                     }
                 }
             }
@@ -496,7 +496,7 @@ public class Koma_move : Instantiation
                 {
                     if (banmen[a + i, b + j] != player.player2)
                     {
-                        Instantiate_koma(select, a + i, b + i, direction_player1);
+                        Instantiate_koma(select, a + i, b + j, direction_player1);
                     }
                 }
 
@@ -653,7 +653,7 @@ public class Koma_move : Instantiation
                     {
                         if (banmen[a + i, b + j] != player.player1)
                         {
-                            Instantiate_koma(select, a + i, b + i, direction_player1);
+                            Instantiate_koma(select, a + i, b + j, direction_player1);
                         }
                     }
                 }
@@ -747,7 +747,7 @@ public class Koma_move : Instantiation
                     {
                         if (banmen[a + i, b + j] != player.player2)
                         {
-                            Instantiate_koma(select, a + i, b + i, direction_player1);
+                            Instantiate_koma(select, a + i, b + j, direction_player1);
                         }
                     }
                 }
@@ -847,7 +847,7 @@ public class Koma_move : Instantiation
                     {
                         if (banmen[a + i, b + j] != player.player1)
                         {
-                            Instantiate_koma(select, a + i, b + i, direction_player1);
+                            Instantiate_koma(select, a + i, b + j, direction_player1);
                         }
                     }
                 }
@@ -942,7 +942,7 @@ public class Koma_move : Instantiation
                     {
                         if (banmen[a + i, b + j] != player.player2)
                         {
-                            Instantiate_koma(select, a + i, b + i, direction_player1);
+                            Instantiate_koma(select, a + i, b + j, direction_player1);
                         }
                     }
                 }

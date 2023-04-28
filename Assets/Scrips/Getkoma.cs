@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class Getkoma : MonoBehaviour
 {
-    public static void Get_koma(string winner ,player turn, name_koma[,] koma, int[] player1_motigoma, int[] player2_motigoma, int a, int b)
+    
+    public static void Get_koma(ref string winner ,player turn, name_koma[,] koma, int[] player1_motigoma, int[] player2_motigoma, int a, int b)
     {
         if (koma[a, b] == name_koma.gyoku)
         {
